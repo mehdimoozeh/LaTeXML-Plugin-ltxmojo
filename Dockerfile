@@ -17,13 +17,12 @@
 ##
 ## docker run -p 8080:8080 --rm latexml-plugin-ltxmojo
 
-FROM alpine:3.7
+FROM alpine:3.17
 
 # Start by installing the system dependencies
 RUN apk add --no-cache \
     db-dev \
     g++ \
-    gcc \
     gcc \
     git \
     libc-dev \
@@ -38,6 +37,7 @@ RUN apk add --no-cache \
     perl \
     perl-dev \
     perl-utils \
+    perl-archive-zip \
     wget \
     zlib \
     zlib-dev
